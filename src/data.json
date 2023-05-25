@@ -44,9 +44,9 @@
     "radius": "6,051.8 KM",
     "temperature": "471°c",
     "images": {
-      "planet": "../public/images/planet-venus.svg",
-      "internal": "../public/images/planet-venus-internal.svg",
-      "geology": "../public/images/geology-venus.png"
+      "planet": "./public/images/planet-venus.svg",
+      "internal": "./public/images/planet-venus-internal.svg",
+      "geology": "./public/images/geology-venus.png"
     },
     "width": 154,
     "height": 154
