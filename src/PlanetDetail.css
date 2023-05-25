@@ -1,0 +1,111 @@
+.overview,
+.structure,
+.surface {
+  font-size: 0.9rem;
+  font-family: "Spartan", sans-serif;
+  font-weight: 700;
+  line-height: 1rem;
+  letter-spacing: 0.2rem;
+  color: hsla(0, 0%, 100%, 0.5);
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.planetobj {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6rem;
+  padding-bottom: 4.7rem;
+}
+
+.features {
+  min-width: 100%;
+  padding: 2rem 2.4rem;
+  border-bottom: 0.1rem solid hsla(0, 0%, 100%, 0.2);
+  display: flex;
+  justify-content: center;
+  gap: 4.3rem;
+}
+
+.planetImg img {
+  width: 11rem;
+  height: 11rem;
+}
+
+section {
+  width: 30.7rem;
+  height: auto;
+  text-align: center;
+}
+
+section h1 {
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 5.2rem;
+  font-family: "Antonio", sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+section p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  font-family: "Spartan", sans-serif;
+  line-height: 2.2rem;
+  color: hsla(0, 0%, 100%, 0.75);
+  margin-top: 1.6rem;
+}
+section .source {
+  margin-top: 3.2rem;
+  font-family: Spartan;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0px;
+
+  color: hsla(0, 0%, 100%, 0.5);
+
+  text-align: center;
+  text-transform: capitalize;
+}
+
+section .source a {
+  color: hsla(0, 0%, 100%, 0.5);
+  text-decoration: underline;
+}
+
+.statistic {
+  margin-top: -7rem;
+  min-width: 32.7rem;
+  /* min-height: auto; */
+}
+
+.statistic > div {
+  width: 100%;
+  height: 4.8rem;
+  border: 0.1rem solid hsla(0, 0%, 100%, 0.2);
+  margin-top: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 2.4rem;
+  font-family: Spartan;
+  font-size: 8px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.7272727489471436px;
+  text-align: left;
+  color: hsl(0, 0%, 100%, 0.5);
+  text-transform: uppercase;
+}
+.statistic div > div {
+  font-family: Antonio;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: -0.75px;
+  text-align: right;
+
+  color: #ffffff;
+}
