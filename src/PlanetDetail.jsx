@@ -50,7 +50,7 @@ const PlanetDetail = ({ planets }) => {
                   source:
                   <a href={planetObj.overview.source}>
                     wikipedia
-                    <img src="../public/images/icon-source.svg" alt="" />
+                    <img src="images/icon-source.svg" alt="" />
                   </a>
                 </div>
               </section>
@@ -67,8 +67,7 @@ const PlanetDetail = ({ planets }) => {
                 <div className="source">
                   source:{" "}
                   <a href={planetObj.structure.source}>
-                    wikipedia{" "}
-                    <img src="../public/images/icon-source.svg" alt="" />
+                    wikipedia <img src="images/icon-source.svg" alt="" />
                   </a>
                 </div>
               </section>
@@ -90,8 +89,7 @@ const PlanetDetail = ({ planets }) => {
                 <div className="source">
                   source:{" "}
                   <a href={planetObj.geology.source}>
-                    wikipedia{" "}
-                    <img src="../public/images/icon-source.svg" alt="" />
+                    wikipedia <img src="images/icon-source.svg" alt="" />
                   </a>
                 </div>
               </section>
