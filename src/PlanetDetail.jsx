@@ -47,9 +47,9 @@ const PlanetDetail = ({ planets }) => {
                 <h1>{planetObjName}</h1>
                 <p className="paragraph">{planetObj.overview.content}</p>
                 <div className="source">
-                  source:{" "}
+                  source:
                   <a href={planetObj.overview.source}>
-                    wikipedia{" "}
+                    wikipedia
                     <img src="../public/images/icon-source.svg" alt="" />
                   </a>
                 </div>
