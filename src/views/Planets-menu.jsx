@@ -1,23 +1,14 @@
 import "./Planets-menu.css";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Menu = ({ planets }) => {
-  const planetColors = {
-    mercury: "#DEF4FC",
-    venus: "#F7CC7F",
-    earth: "#545BFE",
-    mars: "#FF6A45",
-    jupiter: "#ECAD7A",
-    saturn: "#FCCB6B",
-    uranus: "#65F0D5",
-    neptune: "#497EFA",
-  };
   return (
     <ul>
       {planets.map((planet) => (
         <li key={planet.name}>
           <span
-            style={{ backgroundColor: planetColors[planet.name.toLowerCase()] }}
+            style={{ backgroundColor: planet.color }}
             className="littlePlanet"
           ></span>
           <Link to={`/${planet.name.toLowerCase()}`}>{planet.name}</Link>

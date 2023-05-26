@@ -1,26 +1,33 @@
 import { useParams } from "react-router-dom";
 import "./PlanetDetail.css";
 import { useState } from "react";
+import Menu from "./Planets-menu";
+import { useMediaQuery } from "react-responsive";
 
 const PlanetDetail = ({ planets }) => {
   const { planetName } = useParams();
   const [currentFeature, setCurrentFeature] = useState("overview");
-  console.log(currentFeature);
+  const notMobile = useMediaQuery({ minWidth: 768 });
 
   const planetObj = planets.find(
     (planet) => planet.name.toLowerCase() === planetName,
   );
   const planetObjName = planetObj.name.toLowerCase();
-  console.log(planetObj);
 
   return (
     <div>
       {planetObj ? (
         <div className="planetobj">
+          {notMobile && <Menu planets={planets} />}
           <div className="features">
             <div
               className="overview"
               onClick={() => setCurrentFeature("overview")}
+              style={{
+                borderBottom:
+                  currentFeature === "overview" &&
+                  `0.4rem solid ${planetObj.color}`,
+              }}
             >
               overview
               <div className="active"></div>
@@ -28,12 +35,22 @@ const PlanetDetail = ({ planets }) => {
             <div
               className="structure"
               onClick={() => setCurrentFeature("structure")}
+              style={{
+                borderBottom:
+                  currentFeature === "structure" &&
+                  `0.4rem solid ${planetObj.color}`,
+              }}
             >
               structure
             </div>
             <div
               className="surface"
               onClick={() => setCurrentFeature("surface")}
+              style={{
+                borderBottom:
+                  currentFeature === "surface" &&
+                  `0.4rem solid ${planetObj.color}`,
+              }}
             >
               surface
             </div>
@@ -78,7 +95,7 @@ const PlanetDetail = ({ planets }) => {
               <div className="planetImg">
                 <img src={planetObj.images.planet} alt={planetObjName} />
                 <img
-                  className="surface"
+                  className="surfaceimg"
                   src={planetObj.images.geology}
                   alt={planetObjName}
                 />
