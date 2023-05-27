@@ -1,5 +1,6 @@
 body {
   width: 37.5rem;
+  overflow-x: hidden;
 }
 
 nav .header {
@@ -30,5 +31,18 @@ nav .header {
   nav .header {
     justify-content: center;
     border-bottom: none;
+  }
+}
+
+@media (min-width: 1398px) {
+  nav .header {
+    justify-content: start;
+    /* align-items: center; */
+    border-bottom: none;
+    /* display: none; */
+    position: absolute;
+    align-items: center;
+    top: 0.5rem;
+    z-index: -1;
   }
 }

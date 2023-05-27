@@ -26,11 +26,16 @@ const PlanetDetail = ({ planets }) => {
               style={{
                 borderBottom:
                   currentFeature === "overview" &&
+                  !notMobile &&
                   `0.4rem solid ${planetObj.color}`,
+                backgroundColor:
+                  currentFeature === "overview" &&
+                  notMobile &&
+                  `${planetObj.color}`,
               }}
             >
+              <span className="numb">01</span>
               overview
-              <div className="active"></div>
             </div>
             <div
               className="structure"
@@ -38,9 +43,15 @@ const PlanetDetail = ({ planets }) => {
               style={{
                 borderBottom:
                   currentFeature === "structure" &&
+                  !notMobile &&
                   `0.4rem solid ${planetObj.color}`,
+                backgroundColor:
+                  currentFeature === "structure" &&
+                  notMobile &&
+                  `${planetObj.color}`,
               }}
             >
+              <span className="numb">02</span>
               structure
             </div>
             <div
@@ -49,67 +60,79 @@ const PlanetDetail = ({ planets }) => {
               style={{
                 borderBottom:
                   currentFeature === "surface" &&
+                  !notMobile &&
                   `0.4rem solid ${planetObj.color}`,
+                backgroundColor:
+                  currentFeature === "surface" &&
+                  notMobile &&
+                  `${planetObj.color}`,
               }}
             >
+              <span className="numb">03</span>
               surface
             </div>
           </div>
           {currentFeature === "overview" && (
-            <div className="switchable-parent">
-              <div className="planetImg">
-                <img src={planetObj.images.planet} alt={planetObjName} />
-              </div>
-              <section>
-                <h1>{planetObjName}</h1>
-                <p className="paragraph">{planetObj.overview.content}</p>
-                <div className="source">
-                  source:
-                  <a href={planetObj.overview.source}>
-                    wikipedia
-                    <img src="images/icon-source.svg" alt="" />
-                  </a>
+            <div className="container">
+              <div className="switchable-parent">
+                <div className="planetImg">
+                  <img src={planetObj.images.planet} alt={planetObjName} />
                 </div>
-              </section>
+                <section>
+                  <h1>{planetObjName}</h1>
+                  <p className="paragraph">{planetObj.overview.content}</p>
+                  <div className="source">
+                    source:
+                    <a href={planetObj.overview.source}>
+                      wikipedia
+                      <img src="images/icon-source.svg" alt="" />
+                    </a>
+                  </div>
+                </section>
+              </div>
             </div>
           )}
           {currentFeature === "structure" && (
-            <div className="switchable-parent">
-              <div className="planetImg">
-                <img src={planetObj.images.internal} alt={planetObjName} />
-              </div>
-              <section>
-                <h1>{planetObjName}</h1>
-                <p className="paragraph">{planetObj.structure.content}</p>
-                <div className="source">
-                  source:{" "}
-                  <a href={planetObj.structure.source}>
-                    wikipedia <img src="images/icon-source.svg" alt="" />
-                  </a>
+            <div className="container">
+              <div className="switchable-parent">
+                <div className="planetImg">
+                  <img src={planetObj.images.internal} alt={planetObjName} />
                 </div>
-              </section>
+                <section>
+                  <h1>{planetObjName}</h1>
+                  <p className="paragraph">{planetObj.structure.content}</p>
+                  <div className="source">
+                    source:{" "}
+                    <a href={planetObj.structure.source}>
+                      wikipedia <img src="images/icon-source.svg" alt="" />
+                    </a>
+                  </div>
+                </section>
+              </div>
             </div>
           )}
           {currentFeature === "surface" && (
-            <div className="switchable-parent">
-              <div className="planetImg">
-                <img src={planetObj.images.planet} alt={planetObjName} />
-                <img
-                  className="surfaceimg"
-                  src={planetObj.images.geology}
-                  alt={planetObjName}
-                />
-              </div>
-              <section>
-                <h1>{planetObjName}</h1>
-                <p className="paragraph">{planetObj.geology.content}</p>
-                <div className="source">
-                  source:{" "}
-                  <a href={planetObj.geology.source}>
-                    wikipedia <img src="images/icon-source.svg" alt="" />
-                  </a>
+            <div className="container">
+              <div className="switchable-parent">
+                <div className="planetImg">
+                  <img src={planetObj.images.planet} alt={planetObjName} />
+                  <img
+                    className="surfaceimg"
+                    src={planetObj.images.geology}
+                    alt={planetObjName}
+                  />
                 </div>
-              </section>
+                <section>
+                  <h1>{planetObjName}</h1>
+                  <p className="paragraph">{planetObj.geology.content}</p>
+                  <div className="source">
+                    source:{" "}
+                    <a href={planetObj.geology.source}>
+                      wikipedia <img src="images/icon-source.svg" alt="" />
+                    </a>
+                  </div>
+                </section>
+              </div>
             </div>
           )}
           <div className="statistic">
@@ -131,7 +154,9 @@ const PlanetDetail = ({ planets }) => {
             </div>
           </div>
         </div>
-      ) : null}
+      ) : (
+        planetName === "mercury"
+      )}
     </div>
   );
 };

@@ -31,6 +31,11 @@ ul li a {
 
   color: #ffffff;
 }
+
+ul li a:hover {
+  color: #ffffff;
+  cursor: pointer;
+}
 .littlePlanet {
   width: 2rem;
   height: 2rem;
@@ -74,5 +79,13 @@ ul li a {
     font-size: 1.1rem;
     line-height: 2.5rem;
     letter-spacing: 0.1rem;
+  }
+}
+
+@media (min-width: 1398px) {
+  ul {
+    /* display: absolute; */
+    justify-content: end;
+    padding-right: 4rem;
   }
 }

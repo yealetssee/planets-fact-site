@@ -41,7 +41,7 @@
 }
 
 .planetImg img {
-  max-width: 11rem;
+  width: 11rem;
   /* max-height: 100%; */
 }
 .planetImg {
@@ -54,7 +54,7 @@
 }
 .planetImg .surfaceimg {
   position: absolute;
-  height: 80%;
+  height: 85%;
   top: 50%;
 }
 
@@ -136,13 +136,197 @@ section .source a {
 
   color: #ffffff;
 }
+.numb {
+  display: none;
+}
 
 @media (min-width: 768px) {
-  .features {
-    order: 3;
+  .planetImg img {
+    /* width: 60%; */
+    position: relative;
+    left: 20rem;
   }
 
+  .planetImg .surfaceimg {
+    width: 40%;
+  }
   .planetImg {
-    margin-top: 1rem;
+    margin-top: 5rem;
+  }
+
+  .features {
+    order: 1;
+    display: block;
+    min-width: 28.1rem;
+    border-bottom: 0rem;
+    /* background-color: red; */
+    /* margin-top: 35rem; */
+    position: relative;
+    top: 6rem;
+
+    /* top: 50rem;
+    right: 7rem; */
+  }
+
+  .numb {
+    display: inline-block;
+    margin-right: 1.7rem;
+    color: hsl(0, 0%, 100%, 0.5);
+  }
+  .overview,
+  .structure,
+  .surface {
+    border: 0.1rem solid hsl(0, 0%, 100%, 0.2);
+    padding: 0.8rem;
+    padding-left: 2rem;
+    color: #ffffff;
+    cursor: pointer;
+    height: 4rem;
+  }
+  .overview::after,
+  .structure::after,
+  .surface::after {
+    background-color: red;
+  }
+
+  .features div + div {
+    margin-top: 1.6rem;
+  }
+  .statistic {
+    order: 2;
+  }
+
+  section {
+    /* margin-left: -40rem; */
+    text-align: left;
+  }
+
+  section .source {
+    text-align: left;
+  }
+
+  .planetobj {
+    /* position: relative; */
+    flex-direction: row;
+
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6rem;
+  }
+
+  .statistic {
+    /* margin-top: 2.7rem; */
+    display: flex;
+    gap: 1.1rem;
+  }
+  .statistic > div {
+    width: 16.4rem;
+    height: 8.8rem;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 0.6rem;
+  }
+
+  /* .statistic div > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  } */
+}
+
+@media (min-width: 1398px) {
+  .container {
+    /* background-color: red; */
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    align-items: center;
+    /* flex-direction: column; */
+  }
+  .planetobj {
+    /* flex-direction: column; */
+    /* flex-direction: row; */
+    display: block;
+  }
+
+  .statistic {
+    order: 3;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  .statistic > div {
+    width: 25.5rem;
+    height: 12.8rem;
+    align-items: start;
+    justify-content: start;
+    gap: 1rem;
+    padding-top: 2rem;
+  }
+  .statistic div {
+    font-size: 1.1rem;
+  }
+
+  .statistic div > div {
+    font-size: 4rem;
+  }
+  /* section {
+    position: relative;
+    top: -50rem;
+    left: 45rem;
+    margin-bottom: 0rem;
+  } */
+  section {
+    margin-top: 0;
+    margin-bottom: 0;
+    position: relative;
+    top: -13rem;
+    left: 45rem;
+    margin-bottom: 0rem;
+  }
+  section h1 {
+    font-size: 8rem;
+    line-height: 10.3rem;
+    /* position: relative;
+    top: -50rem;
+    left: 45rem;
+    margin-bottom: 0rem; */
+  }
+  section p {
+    font-size: 1.4rem;
+  }
+  .planetImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+  }
+  .planetImg img {
+    width: 100%;
+    position: relative;
+    left: -20rem;
+    top: 16.3rem;
+  }
+  .planetImg .surfaceimg {
+    position: relative;
+    height: 20rem;
+    left: -20rem;
+    top: 1.3rem;
+  }
+
+  .features {
+    /* top: -20rem; */
+    /* position: relative; */
+    /* order: 2; */
+    width: 35rem;
+    left: 100rem;
+    top: 57rem;
+    margin-top: 0rem;
+    /* height: auto; */
   }
 }
