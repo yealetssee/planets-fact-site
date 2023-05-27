@@ -53,9 +53,10 @@
   align-items: center;
 }
 .planetImg .surfaceimg {
-  position: absolute;
+  position: relative;
   height: 85%;
   top: 50%;
+  width: 7rem;
 }
 
 section {
@@ -142,13 +143,17 @@ section .source a {
 
 @media (min-width: 768px) {
   .planetImg img {
-    /* width: 60%; */
+    width: 15rem;
     position: relative;
     left: 20rem;
   }
 
   .planetImg .surfaceimg {
-    width: 40%;
+    width: 20%;
+    top: -1rem;
+    /* height: 80%; */
+    left: 20rem;
+    position: relative;
   }
   .planetImg {
     margin-top: 5rem;
@@ -317,6 +322,7 @@ section .source a {
     height: 20rem;
     left: -20rem;
     top: 1.3rem;
+    width: 40%;
   }
 
   .features {

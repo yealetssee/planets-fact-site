@@ -1,22 +1,24 @@
-import { useParams } from "react-router-dom";
+import { Routes, useParams, Route } from "react-router-dom";
 import "./PlanetDetail.css";
 import { useState } from "react";
 import Menu from "./Planets-menu";
 import { useMediaQuery } from "react-responsive";
 
 const PlanetDetail = ({ planets }) => {
-  const { planetName } = useParams();
+  let { planetName } = useParams();
+
   const [currentFeature, setCurrentFeature] = useState("overview");
   const notMobile = useMediaQuery({ minWidth: 768 });
 
   const planetObj = planets.find(
     (planet) => planet.name.toLowerCase() === planetName,
   );
+
   const planetObjName = planetObj.name.toLowerCase();
 
   return (
     <div>
-      {planetObj ? (
+      {planetObj && (
         <div className="planetobj">
           {notMobile && <Menu planets={planets} />}
           <div className="features">
@@ -154,8 +156,6 @@ const PlanetDetail = ({ planets }) => {
             </div>
           </div>
         </div>
-      ) : (
-        planetName === "mercury"
       )}
     </div>
   );

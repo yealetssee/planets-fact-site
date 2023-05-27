@@ -1,6 +1,5 @@
 import "./Planets-menu.css";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 
 const Menu = ({ planets }) => {
   return (
